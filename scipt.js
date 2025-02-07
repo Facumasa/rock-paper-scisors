@@ -31,57 +31,67 @@ function getHumanChoice () {
 }    
 
 
-// Function that plays one round
-function playRound(humanChoice,computerChoice) {
-    // Tied
-    if (humanChoice===computerChoice) {
-        console.log("We tied, we both picked");
-        switch (humanChoice) {
-            case 1:
-                console.log("Rock");
-                break;
-            case 2:
-                console.log("Paper");
-                break;
-            default:
-                console.log("Scisors");
-                break;
-        }
-    }
-
-    else if (humanChoice===1) {
-        if (computerChoice===2) {
-            console.log("You lose! Paper beats Rock");
-        }
-        else {
-            console.log("You win! Rock beats Scisors");
-        }
-    }
-
-    else if (humanChoice===2) {
-        if (computerChoice===1) {
-            console.log("You win! Paper beats Rock");
-        }
-        else {
-            console.log("You lose! Scisors beats Paper");
-        }
+function playGame() {
+    console.log("we are gonna play to the best of 5 games")
+    for (let i = 0; i < 4; i++) {
+        console.log(i);
         
     }
 
-    else if (humanChoice===3) {
-        if (computerChoice===1) {
-            console.log("You lose! Rock beats Scisors");
+    // Function that plays one round
+    function playRound(humanChoice,computerChoice) {
+        // Tied
+        if (humanChoice===computerChoice) {
+            console.log("We tied, we both picked");
+            switch (humanChoice) {
+                case 1:
+                    console.log("Rock");
+                    break;
+                case 2:
+                    console.log("Paper");
+                    break;
+                default:
+                    console.log("Scisors");
+                    break;
+            }
         }
-        else {
-            console.log("You win! Scisors beats Paper");
-        }
-        
-    }
 
-    else {
-        console.log("something went wrong, you picked ",humanChoice," and I picked ",computerChoice," but somwhere there was an error");
+        else if (humanChoice===1) {
+            if (computerChoice===2) {
+                console.log("You lose! Paper beats Rock");
+            }
+            else {
+                console.log("You win! Rock beats Scisors");
+            }
+        }
+
+        else if (humanChoice===2) {
+            if (computerChoice===1) {
+                console.log("You win! Paper beats Rock");
+            }
+            else {
+                console.log("You lose! Scisors beats Paper");
+            }
+            
+        }
+
+        else if (humanChoice===3) {
+            if (computerChoice===1) {
+                console.log("You lose! Rock beats Scisors");
+            }
+            else {
+                console.log("You win! Scisors beats Paper");
+            }
+            
+        }
+
+        else {
+            console.log("something went wrong, you picked ",humanChoice," and I picked ",computerChoice," but somwhere there was an error");
+        }
     }
 }
+
+playGame();
 
 let human=getHumanChoice();
 let computer=getComputerChoice();
