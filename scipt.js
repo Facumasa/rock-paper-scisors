@@ -51,29 +51,29 @@ function playRound(humanChoice,computerChoice) {
 
     else if (humanChoice===1) {
         if (computerChoice===2) {
-            console.log("You lose! Paper beats Rock")
+            console.log("You lose! Paper beats Rock");
         }
         else {
-            console.log("You win! Rock beats Scisors")
+            console.log("You win! Rock beats Scisors");
         }
     }
 
     else if (humanChoice===2) {
         if (computerChoice===1) {
-            console.log("You win! Paper beats Rock")
+            console.log("You win! Paper beats Rock");
         }
         else {
-            console.log("You lose! Scisors beats Paper")
+            console.log("You lose! Scisors beats Paper");
         }
         
     }
 
     else if (humanChoice===3) {
         if (computerChoice===1) {
-            console.log("You lose! Rock beats Scisors")
+            console.log("You lose! Rock beats Scisors");
         }
         else {
-            console.log("You win! Scisors beats Paper")
+            console.log("You win! Scisors beats Paper");
         }
         
     }
@@ -83,4 +83,8 @@ function playRound(humanChoice,computerChoice) {
     }
 }
 
-getHumanChoice();
+let human=getHumanChoice();
+let computer=getComputerChoice();
+
+console.log("And I have chosen ",computer);
+playRound(human,computer);
