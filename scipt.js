@@ -30,7 +30,7 @@ function playGame() {
     console.log("we are gonna play to the best of 5 games");
     let humanScore=0;
     let computerScore=0;
-    for (let i = 0; i < 5; i++) {
+    // for (let i = 0; i < 5; i++) {
         console.log("");
         console.log("Our current score is Human:",humanScore,"; Computer:",computerScore);
         console.log("");
@@ -51,7 +51,7 @@ function playGame() {
                 break;
         }
         playRound(human,computer);
-    }
+    // }
     console.log("Our FINAL score is Human:",humanScore,"; Computer:",computerScore);
 
     // Function that plays one round
