@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="scipt.js"></script>
+    <script src="scipt.js" defer></script>
+    <!-- defer on the script is to run the script
+      after the html is created so it has sth to change-->
 </head>
 <body>
-    <button id="one">Rock</button>
-    <button id="two">Paper</button>
-    <button id="three">Scisors</button>
-
+    <h1>Let's play Rock, Paper, Scisors!</h1>
+    <div id="container">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scisors">Scisors</button>
+        <h2>Whoever gets to 5 points first wins.</h2>
+    </div>
 </body>
 </html>
