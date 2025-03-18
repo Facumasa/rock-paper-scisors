@@ -22,8 +22,12 @@ writeHuman.classList.add("content");
 
 container.appendChild(writeHuman);
 
+const writePreComputer = document.createElement("div");
+writePreComputer.classList.add("content");
 
-const writeComputer = document.createElement("div");
+container.appendChild(writePreComputer);
+
+const writeComputer = document.createElement("h4");
 writeComputer.classList.add("content");
 
 container.appendChild(writeComputer);
@@ -133,10 +137,12 @@ function getHumanChoice (sign) {
 
         else if (humanChoice===1) {
             if (computerChoice===2) {
+                writePreComputer.textContent ="I have chosen Paper";
                 writeComputer.textContent ="You lose! Paper beats Rock";
                 computerScore++;
             }
             else {
+                writePreComputer.textContent ="I have chosen Scisors";
                 writeComputer.textContent ="You win! Rock beats Scisors";
                 humanScore++;
             }
@@ -144,10 +150,12 @@ function getHumanChoice (sign) {
 
         else if (humanChoice===2) {
             if (computerChoice===1) {
+                writePreComputer.textContent ="I have chosen Rock";
                 writeComputer.textContent ="You win! Paper beats Rock";
                 humanScore++;
             }
             else {
+                writePreComputer.textContent ="I have chosen Scisors";
                 writeComputer.textContent ="You lose! Scisors beats Paper";
                 computerScore++;
             }
@@ -156,10 +164,12 @@ function getHumanChoice (sign) {
 
         else if (humanChoice===3) {
             if (computerChoice===1) {
+                writePreComputer.textContent ="I have chosen Rock";
                 writeComputer.textContent ="You lose! Rock beats Scisors";
                 computerScore++;
             }
             else {
+                writePreComputer.textContent ="I have chosen Paper";
                 writeComputer.textContent ="You win! Scisors beats Paper";
                 humanScore++;
             }
@@ -196,6 +206,7 @@ function checkScore() {
 
 function gameOver(){
     writeComputer.textContent ='';
+    writePreComputer.textContent ='';
     writeHuman.textContent ='';
 
     // removes all <button> elements, even the ones created in the html:
